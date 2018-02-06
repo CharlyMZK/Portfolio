@@ -22,7 +22,7 @@ class Project
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=1000)
      */
     private $description;
 

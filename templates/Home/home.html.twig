@@ -4,20 +4,27 @@
   {% include 'Components/top.html.twig' %}
 </section>
 
+<style>
+.badge{
+    width: 3rem;
+    margin-top: 1rem;
+}
+</style>
+
 <div class="album py-5 bg-light" id="projects">
   <div class="container">
     <h1 class=" section-heading section-title text-center ">Some of my projects</h1>
     <div class="row">
-      {% for project in projects %}
+      {% for project in projects|reverse %}
       <div class="col-md-4">
         <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="https://marketplace.canva.com/MACEATZU6s0/1/0/thumbnail_large/canva-mountain-photo-travel-quote-desktop-wallpaper-MACEATZU6s0.jpg"
+          <img class="card-img-top" src="{{project.image}}"
             alt="Card image cap">
           <div class="card-body">
-            <p class="card-title">{{project.name}}</p>
-            <p class="card-text">{{project.description}}</p>
+            <p class="card-title" style="font-weight:bold;font-family: 'Encode Sans Expanded', sans-serif;">{{project.name}}</p>
+            <p class="card-text">{{project.description|raw}}</p>
             <div class="d-flex justify-content-between align-items-center">
-              <button type="button" class="btn btn-sm btn-outline-secondary btn-view">View</button>
+              <a href="{{project.link}}" class="btn btn-view btn-sm btn-outline-secondary btn-view">View</a>
             </div>
           </div>
         </div>
@@ -37,4 +44,8 @@
 
 
 </main>
+
+
+
+
 {% include 'Layouts/footer.html.twig' %} {% endblock %}

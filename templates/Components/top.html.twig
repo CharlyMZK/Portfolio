@@ -4,10 +4,56 @@
     <img class="rounded-circle" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/a9475211889067.562541caf0859.png"
         alt="Generic placeholder image" width="140" height="140">
 
-    <p class="jumbotron-text lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not
-        too short so folks don't simply skip over it entirely.</p>
+    <p class="jumbotron-text lead text-muted">Just Developping things in my Lab. Interested to work with me ? You can send me a message down there and i'll be glad to get in touch.</p>
     <p class="contact-buttons">
-        <a href="#" class="btn btn-git my-2">My github</a>
-        <a href="#" class="btn btn-secondary my-2">Contact me</a>
+        <a href="https://github.com/CharlyMZK?tab=repositories" class="btn btn-git my-2">My github</a>
+        <a href="#" class="btn btn-secondary my-2" id="contactInput" data-toggle="modal" data-target="#contactModal">Contact me</a>
     </p>
 </div>
+
+
+<div class="modal fade" id="contactModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <form role="form">
+      <div class="modal-header">
+        <h5 class="modal-title">Send me something</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       
+        <br style="clear:both">
+    				<div class="form-group">
+						<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+					</div>
+                    <div class="form-group">
+                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>               
+                    </div>
+            
+      
+       
+      </div>
+      <div class="modal-footer">
+          <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+       </form>
+    </div>
+  </div>
+</div>
+<script>
+$('#contactModal').on('shown.bs.modal', function () {
+  $('#contactInput').focus()
+})
+</script>
