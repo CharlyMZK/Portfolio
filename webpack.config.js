@@ -11,6 +11,14 @@ Encore
     // will create public/build/app.js and public/build/app.css
     .addEntry('global', './assets/js/global.js')
 
+    .addEntry('footer', './assets/js/footer.js')
+
+    .addEntry('jumbotron', './assets/js/jumbotron.js')
+
+    .addEntry('skills', './assets/js/skills.js')
+    
+    .addEntry('timeline', './assets/js/timeline.js')
+
     // allow sass/scss files to be processed
     .enableSassLoader()
 

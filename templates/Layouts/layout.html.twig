@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
+
+  
     <head>
-   <link rel="stylesheet" href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="{{ asset('build/bootstrap.css') }}" rel="stylesheet" />
         <link href="{{ asset('build/global.css') }}" rel="stylesheet" />
+        <link href="{{ asset('build/footer.css') }}" rel="stylesheet" />
+        <link href="{{ asset('build/jumbotron.css') }}" rel="stylesheet" />
+        <link href="{{ asset('build/skills.css') }}" rel="stylesheet" />
+        <link href="{{ asset('build/timeline.css') }}" rel="stylesheet" />
+        <link rel="icon" href="http://www.yoursite.com/favicon.ico?v=2" />
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
